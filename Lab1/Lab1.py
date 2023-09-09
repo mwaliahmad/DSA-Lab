@@ -1,3 +1,16 @@
+# helping functions
+
+def ReadFile(path):
+    file = open(file=path ,mode='r')
+    lines = file.read()
+    numbers = []
+    arr = lines.split()
+    for i in arr:
+        num = int(i)
+        numbers.append(num)
+        
+    return numbers
+
 # Problem 1
 def SearchA(Arr, x):
     result = []
@@ -7,7 +20,8 @@ def SearchA(Arr, x):
     return result
         
 
-print(SearchA([22,2,1,7,11,13,5,2,9], 2))            
+Numbers = ReadFile("problem1.txt")
+print(SearchA(Numbers, 2))            
             
 # Problem 2
 
@@ -20,7 +34,8 @@ def Minimun(Arr, Starting, Ending):
             
     return result
 
-print(Minimun( [3,4,7,8,0,1,23,-2,-5], 4, 7))
+Numbers = ReadFile("problem3.txt")
+print(Minimun( Numbers, 4, 7))
             
 # Problem 4
 
@@ -33,7 +48,9 @@ def Sort4(Arr):
        
     return Sorted
 
-print (Sort4([3,4,7,8,0,1,23,-2,-5]))
+
+Numbers = ReadFile("problem3.txt")
+print (Sort4(Numbers))
 
 # Problem 5
 
@@ -98,7 +115,10 @@ def SortedMerge(Arr1, Arr2):
     Arr = Arr1 + Arr2
     return Sort4(Arr) 
 
-print(SortedMerge([0,3,4,10,11], [1,8,13,24])) 
+
+Numbers1 = ReadFile("problem8.1.txt")
+Numbers2 = ReadFile("problem8.2.txt")
+print(SortedMerge(Numbers1, Numbers2)) 
 
 # Problem 9
 
@@ -136,11 +156,10 @@ def Sort10(Arr):
     
     return ArrFinal
     
-    
-print(Sort10([10, -1, 9, 20, -3, -8, 22, 9, 7]))
+
+Numbers = ReadFile("problem10.txt")
+print(Sort10(Numbers))
         
-
-
 
 
 
