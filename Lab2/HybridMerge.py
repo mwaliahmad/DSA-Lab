@@ -3,7 +3,7 @@ from Insertion import InsertionSort
 import time as time
 
 def main():
-    n = 30000
+    n = 100000
     array = funcs.RandomArray(n)
 
     start_time = time.time()
@@ -20,7 +20,7 @@ def main():
 
 def HybridMergeSort(array, start, end):
 
-    if ((end - start) > 100):
+    if ((end - start) > 16):
 	
         mid = (start + end) // 2
         HybridMergeSort(array, start, mid)

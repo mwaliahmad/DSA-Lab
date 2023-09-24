@@ -2,7 +2,7 @@ import funcs
 import time as time
 
 def main():
-    n = 30000
+    n = 100000
     array = funcs.RandomArray(n)
 
     start_time = time.time()
